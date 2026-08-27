@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oasis Indiana — Faith. Community. Purpose.</title>
+<meta name="description" content="Oasis Indiana is a growing network of Christ-centered communities helping young people across Indiana find belonging, grow in faith, discover purpose, and navigate real life together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0D2B28;
+  --water:#1E5A54;
+  --water-lift:#2A736B;
+  --sand:#EFE4D0;
+  --paper:#FBF7EF;
+  --amber:#D99A2B;
+  --amber-soft:#F0C877;
+  --dusk:#3E4A6B;
+
+  --display:"Fraunces",Georgia,serif;
+  --body:"Karla",system-ui,-apple-system,sans-serif;
+  --util:"Space Mono",ui-monospace,monospace;
+
+  --pad:clamp(20px,5vw,64px);
+  --maxw:1080px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:var(--display);
+  font-variation-settings:"SOFT" 30,"WONK" 1;
+  font-weight:600;
+  line-height:1.05;
+  margin:0;
+  letter-spacing:-0.015em;
+}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+.eyebrow{
+  font-family:var(--util);
+  font-size:11px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  opacity:.72;
+  margin:0 0 18px;
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(120% 90% at 78% 8%, rgba(217,154,43,.30) 0%, rgba(217,154,43,0) 55%),
+    linear-gradient(168deg, var(--dusk) 0%, var(--water) 46%, var(--ink) 100%);
+  color:var(--sand);
+  position:relative;
+  overflow:hidden;
+  padding-top:clamp(56px,11vw,110px);
+  padding-bottom:clamp(76px,13vw,132px);
+}
+.hero__glyph{
+  position:absolute;
+  right:-40px;
+  bottom:-30px;
+  width:min(46vw,420px);
+  opacity:.14;
+  pointer-events:none;
+}
+.hero__inner{position:relative;z-index:2}
+.hero h1{
+  font-size:clamp(44px,9.5vw,92px);
+  font-weight:700;
+  max-width:14ch;
+  margin-bottom:22px;
+}
+.hero h1 em{
+  font-style:italic;
+  font-weight:400;
+  color:var(--amber-soft);
+}
+.hero__lede{
+  font-size:clamp(17px,2.3vw,21px);
+  max-width:46ch;
+  opacity:.92;
+  margin-bottom:34px;
+}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px}
+
+.btn{
+  display:inline-block;
+  font-family:var(--body);
+  font-weight:700;
+  font-size:15px;
+  letter-spacing:.01em;
+  text-decoration:none;
+  padding:14px 26px;
+  border-radius:999px;
+  border:1.5px solid transparent;
+  transition:transform .16s ease, background .16s ease, color .16s ease;
+}
+.btn--solid{background:var(--amber);color:var(--ink)}
+.btn--solid:hover{background:var(--amber-soft);transform:translateY(-2px)}
+.btn--ghost{border-color:rgba(239,228,208,.45);color:var(--sand)}
+.btn--ghost:hover{background:rgba(239,228,208,.12);transform:translateY(-2px)}
+.btn--dark{background:var(--ink);color:var(--sand)}
+.btn--dark:hover{background:var(--water);transform:translateY(-2px)}
+
+/* waterline divider */
+.waterline{display:block;width:100%;height:44px;color:var(--paper)}
+
+/* ---------- generic section ---------- */
+.section{padding-top:clamp(56px,9vw,96px);padding-bottom:clamp(56px,9vw,96px)}
+.section h2{font-size:clamp(30px,5vw,46px);max-width:18ch;margin-bottom:20px}
+.section__lede{max-width:54ch;font-size:18px;opacity:.86}
+
+/* ---------- what happens ---------- */
+.happens{
+  list-style:none;
+  padding:0;
+  margin:44px 0 0;
+  display:grid;
+  gap:2px;
+  background:rgba(13,43,40,.14);
+  border-top:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+}
+.happens li{
+  background:var(--paper);
+  padding:22px 4px;
+  display:grid;
+  grid-template-columns:minmax(0,7.5rem) 1fr;
+  gap:8px 28px;
+  align-items:baseline;
+}
+.happens dt,.happens .k{
+  font-family:var(--util);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--water);
+}
+.happens .v{font-size:17px}
+@media(max-width:620px){
+  .happens li{grid-template-columns:1fr;gap:4px}
+}
+
+/* ---------- spots (signature) ---------- */
+.spots-band{background:var(--ink);color:var(--sand)}
+.spots-band h2{color:var(--sand)}
+.spots-band .section__lede{opacity:.8}
+.spots{
+  display:grid;
+  gap:22px;
+  margin-top:46px;
+  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+}
+.spot{
+  position:relative;
+  background:var(--water);
+  border-radius:4px 4px 22px 22px;
+  padding:0 26px 26px;
+  border:1px solid rgba(239,228,208,.16);
+  box-shadow:0 18px 0 -12px rgba(0,0,0,.35);
+}
+.spot__blaze{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:66px;
+  height:38px;
+  padding:0 12px;
+  margin-top:-1px;
+  background:var(--amber);
+  color:var(--ink);
+  font-family:var(--util);
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.12em;
+  border-radius:0 0 6px 6px;
+}
+.spot h3{
+  font-size:27px;
+  margin:20px 0 4px;
+  color:var(--sand);
+}
+.spot__campus{
+  font-family:var(--util);
+  font-size:11.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--amber-soft);
+  margin-bottom:20px;
+}
+.spot dl{
+  margin:0 0 22px;
+  border-top:1px solid rgba(239,228,208,.2);
+}
+.spot dl div{
+  display:grid;
+  grid-template-columns:5.4rem 1fr;
+  gap:14px;
+  padding:11px 0;
+  border-bottom:1px solid rgba(239,228,208,.14);
+}
+.spot dt{
+  font-family:var(--util);
+  font-size:10.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  opacity:.72;
+  padding-top:3px;
+}
+.spot dd{margin:0;font-size:16px;line-height:1.45}
+.spot__note{font-size:14.5px;opacity:.82;margin-bottom:22px}
+
+/* pioneer card */
+.spot--open{
+  background:transparent;
+  border:1.5px dashed rgba(239,228,208,.42);
+  box-shadow:none;
+  padding-top:26px;
+  border-radius:4px 4px 22px 22px;
+}
+.spot--open h3{margin-top:0}
+.spot--open .spot__blaze{
+  background:transparent;
+  border:1.5px solid var(--amber-soft);
+  color:var(--amber-soft);
+  border-radius:6px;
+  margin-bottom:18px;
+}
+
+/* ---------- compass ---------- */
+.compass{background:var(--sand)}
+.compass__grid{
+  display:grid;
+  gap:40px;
+  grid-template-columns:1fr;
+  margin-top:8px;
+}
+@media(min-width:840px){
+  .compass__grid{grid-template-columns:1.15fr .85fr;gap:56px}
+}
+.card-note{
+  background:var(--paper);
+  border-left:4px solid var(--water);
+  padding:26px 28px;
+  border-radius:0 10px 10px 0;
+}
+.card-note h3{font-size:21px;margin-bottom:10px}
+.card-note p{font-size:15.5px;margin-bottom:.7em}
+.card-note p:last-child{margin-bottom:0}
+
+/* ---------- about ---------- */
+.about__grid{
+  display:grid;
+  gap:36px;
+  grid-template-columns:1fr;
+  align-items:start;
+}
+@media(min-width:840px){
+  .about__grid{grid-template-columns:.9fr 1.1fr;gap:60px}
+}
+.portrait{
+  width:100%;
+  aspect-ratio:4/5;
+  background:
+    repeating-linear-gradient(135deg,rgba(30,90,84,.10) 0 12px,transparent 12px 24px),
+    var(--sand);
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:var(--util);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--water);
+  padding:24px;
+}
+
+/* ---------- cta ---------- */
+.cta{
+  background:linear-gradient(150deg,var(--water) 0%,var(--ink) 100%);
+  color:var(--sand);
+  text-align:center;
+}
+.cta h2{color:var(--sand);margin:0 auto 18px;max-width:16ch}
+.cta p{max-width:44ch;margin:0 auto 30px;opacity:.9}
+
+/* ---------- footer ---------- */
+.footer{background:var(--ink);color:var(--sand);padding:52px 0 44px;font-size:14.5px}
+.footer a{color:var(--amber-soft)}
+.footer__top{
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px 48px;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding-bottom:26px;
+  border-bottom:1px solid rgba(239,228,208,.18);
+}
+.footer__mark{font-family:var(--display);font-size:24px;font-weight:600}
+.footer__links{display:flex;flex-wrap:wrap;gap:8px 26px;font-family:var(--util);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.footer__links a{text-decoration:none}
+.footer__links a:hover{text-decoration:underline}
+.disclaimer{margin-top:26px;font-size:13px;opacity:.66;max-width:70ch;line-height:1.6}
+
+/* ---------- motion ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn:hover{transform:none}
+  .ripple{animation:none !important}
+}
+.ripple{animation:drift 14s ease-in-out infinite}
+@keyframes drift{
+  0%,100%{transform:translateX(0)}
+  50%{transform:translateX(-22px)}
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+  <svg class="hero__glyph" viewBox="0 0 200 200" aria-hidden="true" fill="none">
+    <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="100" cy="100" r="56" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="100" cy="100" r="34" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M8 148c22-12 34 8 56-4s34 8 56-4 34 8 56-4" stroke="currentColor" stroke-width="2" class="ripple"/>
+    <path d="M8 168c22-12 34 8 56-4s34 8 56-4 34 8 56-4" stroke="currentColor" stroke-width="2" class="ripple" style="animation-delay:-5s"/>
+  </svg>
+
+  <div class="wrap hero__inner">
+    <p class="eyebrow">Christ-centered communities · Indiana</p>
+    <h1>Find your people. Find your purpose. <em>Grow with God.</em></h1>
+    <p class="hero__lede">Oasis Indiana is a growing community for young people across Indiana to find belonging, navigate real life, grow in their relationship with God, and discover how to live with purpose.</p>
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="#communities">Find your Oasis</a>
+      <a class="btn btn--ghost" href="#compass">Join virtually</a>
+    </div>
+  </div>
+</header>
+
+<svg class="waterline" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 44V16c100-14 200 14 300 0s200-22 300-8 200 20 300 6 200-18 300-8v38z" fill="currentColor"/>
+</svg>
+
+<section class="section wrap reveal">
+  <p class="eyebrow">Why Oasis Indiana?</p>
+  <h2>Because life is easier when you don't have to figure it out alone.</h2>
+  <p class="section__lede">College. Faith. Relationships. Career decisions. Pressure. Purpose. Friendships. Adulthood. Sometimes you need more than another meeting, you need people you can actually do life with.</p>
+
+  <ul class="happens">
+    <li><span class="k">Belong</span><span class="v">Build genuine friendships and find a community where you can be known, supported, and valued.</span></li>
+    <li><span class="k">Real Talk</span><span class="v">Honest conversations about the things young people actually navigate: relationships, academics, purpose, pressure, career, identity, and everyday life.</span></li>
+    <li><span class="k">Grow</span><span class="v">Discover how God's Word applies beyond church and learn to live out your faith in practical, everyday situations.</span></li>
+    <li><span class="k">Connect</span><span class="v">Meet other students and young people, build meaningful relationships, network, serve, and grow together.</span></li>
+    <li><span class="k">Enjoy</span><span class="v">Games, conversations, hangouts, workshops, outreach, celebrations, and moments that make community feel like community.</span></li>
+    <li><span class="k">Pray</span><span class="v">Need someone to stand with you? Prayer and spiritual support are part of who we are.</span></li>
+  </ul>
+</section>
+
+<section class="spots-band" id="communities">
+  <div class="section wrap reveal">
+    <p class="eyebrow">Campus communities</p>
+    <h2>One vision. Different campuses. Communities that feel like home.</h2>
+    <p class="section__lede">Each Oasis campus community develops around the real needs of its students while sharing the same heart: helping young people know God, find belonging, grow in purpose, and navigate life together.</p>
+
+    <div class="spots">
+
+      <article class="spot">
+        <span class="spot__blaze">IUI</span>
+        <h3>Oasis Haven Spot</h3>
+        <p class="spot__campus">Indiana University Indianapolis</p>
+        <p class="spot__note">A safe space for real conversations, genuine friendships, personal growth, faith, purpose, and navigating student life together.</p>
+        <dl>
+          <div><dt>Meets</dt><dd>Thursdays, [[ time ]]</dd></div>
+          <div><dt>Where</dt><dd>[[ building or landmark ]]</dd></div>
+          <div><dt>Text</dt><dd>[[ your number ]]</dd></div>
+          <div><dt>For</dt><dd>IU Indianapolis students</dd></div>
+        </dl>
+        <a class="btn btn--solid" href="[[ HAVEN SPOT FORM LINK ]]">Join Haven Spot</a>
+      </article>
+
+      <article class="spot">
+        <span class="spot__blaze">BU</span>
+        <h3>Oasis Fortress</h3>
+        <p class="spot__campus">Butler University</p>
+        <p class="spot__note">A Christ-centered safe space where students can talk honestly about real college life and learn how to make wise, God-centered decisions while building genuine community.</p>
+        <dl>
+          <div><dt>Meets</dt><dd>[[ day &amp; time ]]</dd></div>
+          <div><dt>Where</dt><dd>[[ building or landmark ]]</dd></div>
+          <div><dt>Text</dt><dd>[[ your number ]]</dd></div>
+          <div><dt>Named for</dt><dd>&ldquo;The LORD is my rock, and my fortress&hellip;&rdquo; Psalm 18:2</dd></div>
+        </dl>
+        <a class="btn btn--solid" href="[[ FORTRESS FORM LINK ]]">Connect with Fortress</a>
+      </article>
+
+      <article class="spot spot--open">
+        <span class="spot__blaze">Your Campus</span>
+        <h3>Could your campus be next?</h3>
+        <p class="spot__campus">Across Indiana</p>
+        <p class="spot__note" style="margin-top:18px">We are building toward a future where students across Indiana can find genuine Christ-centered community on their campuses.</p>
+        <p class="spot__note">If you love God, love people, and want to help create meaningful community at your school, we'd love to hear from you.</p>
+        <a class="btn btn--ghost" href="[[ PIONEER FORM LINK ]]">I'm interested</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <p class="eyebrow">You might find us around campus</p>
+  <h2>Sometimes Oasis starts with a simple conversation.</h2>
+  <p class="section__lede">You may find us around campus sharing free copies of <em>Rhapsody of Realities</em>, offering prayer, meeting students, or simply creating space for conversation.</p>
+
+  <ul class="happens">
+    <li><span class="k">Devotionals</span><span class="v">Free copies of <em>Rhapsody of Realities</em> for personal devotional reading.</span></li>
+    <li><span class="k">Prayer</span><span class="v">If there's something you'd like someone to pray with you about, come talk to us.</span></li>
+    <li><span class="k">Conversation</span><span class="v">Tell us how the semester is really going, what you're navigating, or what you wish existed for students on your campus.</span></li>
+    <li><span class="k">Community</span><span class="v">If Oasis sounds like something you'd want to be part of, we'll show you how to stay connected.</span></li>
+  </ul>
+</section>
+
+<section class="compass" id="compass">
+  <div class="section wrap reveal">
+    <p class="eyebrow">Oasis Compass · Virtual community · 18+</p>
+    <h2>You don't need a campus to have an Oasis.</h2>
+
+    <div class="compass__grid">
+
+      <div>
+        <p class="section__lede" style="margin-bottom:1.2em">Oasis Compass is our virtual community for young adults navigating life's next steps: faith, purpose, education, career, relationships, decisions, and everything in between.</p>
+
+        <p>Maybe you're figuring out whether college is right for you. Maybe you've graduated and you're asking, &ldquo;What now?&rdquo; Or maybe you simply want a community that helps you grow with God while figuring life out.</p>
+
+        <p>Compass creates room for real conversations, mentorship, practical life and career sessions, faith, prayer, networking, and community, wherever you are in Indiana.</p>
+
+        <p><strong>You don't have to have everything figured out to start moving in the right direction.</strong></p>
+
+        <p style="margin-top:26px"><a class="btn btn--dark" href="[[ COMPASS FORM LINK ]]">Join Oasis Compass</a></p>
+      </div>
+
+      <div class="card-note">
+        <h3>Why &ldquo;Compass&rdquo;?</h3>
+        <p>Because seasons of transition come with questions: Where am I going? What should I do next? What is my purpose? How do I make the right decisions?</p>
+        <p>Our foundation is God's promise:</p>
+        <p><strong>&ldquo;I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.&rdquo; Psalm 32:8</strong></p>
+        <p style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(13,43,40,.15)"><strong>Under 18?</strong> Compass is for ages 18 and over. If you're still in high school, email us at [[ OASIS EMAIL ]] and we'll connect you with a youth ministry near you. Parents are welcome to reach out first.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <p class="eyebrow">The bigger vision</p>
+  <h2>From one campus to communities across Indiana.</h2>
+  <p class="section__lede">Oasis Indiana began with a simple conviction: young people need places where they can belong, be heard, discover purpose, grow spiritually, and receive practical support for the life they are actually living.</p>
+  <p style="max-width:54ch;margin-top:24px">Our vision is to raise communities across Indiana, on campuses and beyond them, where young people are empowered to know who they are, develop meaningful relationships, make better decisions, serve others, grow in their relationship with God, and become positive influences wherever they go.</p>
+</section>
+
+<section class="section wrap reveal">
+  <div class="about__grid">
+    <div class="portrait">[[ Replace with an Oasis community photo ]]</div>
+    <div>
+      <p class="eyebrow">Our story</p>
+      <h2 style="margin-bottom:22px">It started with creating a place for students to belong.</h2>
+      <p>Oasis Indiana grew from the work already being built through Oasis Haven Spot at Indiana University Indianapolis, a student community centered on real conversations, genuine relationships, faith, purpose, and meeting the practical needs students face.</p>
+      <p>Now the vision is growing beyond one campus: establishing communities across Indiana while also creating a virtual pathway for young people who may not currently have an Oasis where they are.</p>
+      <p>Oasis Indiana is part of the wider Oasis ministry family, connected through Oasis Midwest and Oasis USA, a LoveWorld campus ministry. You can find the national ministry at <a href="https://www.blwoasis.com" style="color:var(--water);font-weight:700">blwoasis.com</a>.</p>
+      <p><em>Rhapsody of Realities</em>, one of the devotional resources we distribute, is published by Believers' LoveWorld (Christ Embassy).</p>
+      <p style="margin-top:26px"><a class="btn btn--dark" href="mailto:[[ OASIS EMAIL ]]">Contact us</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="section wrap reveal">
+    <h2>There's a place for you here.</h2>
+    <p>Find your campus community, join Oasis Compass virtually, or help us bring Oasis to a new campus in Indiana.</p>
+    <a class="btn btn--solid" href="#communities">Find your Oasis</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <div class="footer__mark">Oasis Indiana</div>
+        <div style="font-family:var(--util);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.66;margin-top:6px">Faith · Community · Purpose</div>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#communities">Campuses</a>
+        <a href="#compass">Compass</a>
+        <a href="[[ INSTAGRAM LINK ]]">Instagram</a>
+        <a href="[[ FACEBOOK LINK ]]">Facebook</a>
+        <a href="[[ TIKTOK LINK ]]">TikTok</a>
+        <a href="mailto:[[ OASIS EMAIL ]]">Contact</a>
+      </nav>
+    </div>
+    <p class="disclaimer">Oasis Indiana is an independent Christ-centered community initiative serving young people across Indiana, and is part of the Oasis campus ministry of Believers' LoveWorld. We are not affiliated with, endorsed by, or sponsored by Butler University, Indiana University Indianapolis, or any other institution named on this site. Campus names identify only where our volunteers meet. Oasis Indiana is also not connected to any similarly named local church or organization.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('is-in')});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+
+</body>
+</html>
