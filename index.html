@@ -87,6 +87,19 @@ a{color:inherit}
 .spot--open .spot__blaze{background:transparent;border:1.5px solid var(--amber-soft);color:var(--amber-soft);border-radius:6px;margin-bottom:18px}
 .newtag{display:inline-block;font-family:var(--util);font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--amber);color:var(--ink);padding:3px 9px;border-radius:4px;margin-left:8px;vertical-align:middle}
 
+.doing{margin:0 0 18px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:7px}
+.doing li{font-family:var(--util);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:rgba(239,228,208,.14);border:1px solid rgba(239,228,208,.26);color:var(--sand);padding:5px 10px;border-radius:999px;line-height:1.4}
+.spot--open .doing li{background:transparent}
+
+/* ---- the hour ---- */
+.hour{background:var(--paper)}
+.hourline{margin:40px 0 0;border-top:2px solid var(--water)}
+.hourline__row{display:grid;grid-template-columns:minmax(0,6.5rem) 1fr;gap:12px 26px;padding:20px 0;border-bottom:1px solid rgba(30,90,84,.2)}
+.hourline__t{font-family:var(--util);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--water);padding-top:5px}
+.hourline h3{font-size:19px;margin-bottom:5px}
+.hourline p{font-size:15.5px;margin:0}
+@media(max-width:620px){.hourline__row{grid-template-columns:1fr;gap:4px}}
+
 .always{margin-top:38px;border-top:1px solid rgba(239,228,208,.22);padding-top:28px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .always h3{color:var(--amber-soft);font-size:17px;margin-bottom:7px}
 .always p{font-size:14.5px;margin:0;opacity:.88}
@@ -142,6 +155,7 @@ a{color:inherit}
 .compass{background:var(--sand)}
 .compass__grid{display:grid;gap:36px;grid-template-columns:1fr;margin-top:8px}
 @media(min-width:840px){.compass__grid{grid-template-columns:1.15fr .85fr;gap:52px}}
+.meetline{font-size:15.5px;background:var(--paper);border-left:4px solid var(--amber);padding:14px 18px;border-radius:0 8px 8px 0;margin-top:22px}
 .card-note{background:var(--paper);border-left:4px solid var(--water);padding:26px 28px;border-radius:0 10px 10px 0}
 .card-note h3{font-size:20px;margin-bottom:10px}
 .card-note p{font-size:15.5px;margin-bottom:.7em}
@@ -231,7 +245,17 @@ a{color:inherit}
         <span class="spot__blaze">IUI</span>
         <h3>Oasis Haven Spot</h3>
         <p class="spot__campus">Indiana University Indianapolis</p>
-        <p class="spot__note">Our first community in Indiana. Honest conversations about relationships, exam pressure, money, purpose and everything else, plus friendship and prayer.</p>
+        <p class="spot__note">Our first community in Indiana. One hour, every week, and no two look the same.</p>
+        <ul class="doing">
+          <li>Bible study</li>
+          <li>Real talk</li>
+          <li>Games</li>
+          <li>Karaoke</li>
+          <li>Bible trivia</li>
+          <li>Finish the gospel lyric</li>
+          <li>Prayer walks</li>
+          <li>Movie nights</li>
+        </ul>
         <dl>
           <div><dt>Meets</dt><dd>Tuesdays, 5:30&ndash;6:30 PM ET</dd></div>
           <div><dt>Where</dt><dd>Campus Center. Room varies each week and is announced in the group chat.</dd></div>
@@ -239,8 +263,8 @@ a{color:inherit}
           <div><dt>Follow</dt><dd><a href="https://www.instagram.com/blwoasis.iuindy">@blwoasis.iuindy</a></dd></div>
         </dl>
         <div class="spot__cta">
-          <a class="btn btn--solid btn--sm" href="[[ HAVEN SPOT FORM LINK ]]">Join Haven Spot</a>
-          <a class="btn btn--ghost btn--sm" href="[[ HAVEN SPOT GROUP CHAT ]]">Group chat</a>
+          <a class="btn btn--solid btn--sm" href="https://thehavenspot.carrd.co">Haven Spot site</a>
+          <a class="btn btn--ghost btn--sm" href="https://groupme.com/join_group/110782876/M3dR0NNs">Group chat</a>
         </div>
       </article>
 
@@ -248,7 +272,17 @@ a{color:inherit}
         <span class="spot__blaze">BU</span>
         <h3>Oasis Fortress <span class="newtag">Starting soon</span></h3>
         <p class="spot__campus">Butler University</p>
-        <p class="spot__note">Just getting started, which means you'd be one of the first. If you've been wishing there was somewhere on campus to be honest about how things are actually going, this is it. Sign up and we'll tell you exactly where and when.</p>
+        <p class="spot__note">Just getting started, which means you'd be one of the first. Same heart as Haven Spot, built around what Butler students actually want. Sign up and we'll tell you exactly where and when.</p>
+        <ul class="doing">
+          <li>Stronghold sessions</li>
+          <li>Scripture showdown</li>
+          <li>Finish the gospel lyric</li>
+          <li>Late-night table talk</li>
+          <li>Prayer walks</li>
+          <li>Film &amp; wings night</li>
+          <li>Open mic</li>
+          <li>Exam survival nights</li>
+        </ul>
         <dl>
           <div><dt>Meets</dt><dd>Thursdays, 5:00&ndash;6:00 PM ET</dd></div>
           <div><dt>Where</dt><dd>Sign up and we'll text you the room before the first one.</dd></div>
@@ -257,7 +291,7 @@ a{color:inherit}
           <div><dt>Named for</dt><dd>&ldquo;The LORD is my rock, and my fortress&hellip;&rdquo; Psalm 18:2</dd></div>
         </dl>
         <div class="spot__cta">
-          <a class="btn btn--solid btn--sm" href="[[ FORTRESS FORM LINK ]]">Sign up for Fortress</a>
+          <a class="btn btn--solid btn--sm" href="https://docs.google.com/forms/d/e/1FAIpQLScBNT3ulesQuRbp2Zg62nyBO7LQNf23VZMkjo4O9BbR36tunw/viewform">Sign up for Fortress</a>
         </div>
       </article>
 
@@ -288,6 +322,55 @@ a{color:inherit}
         <p>Take a devotional and walk away. Come once and never come back. Nobody chases anybody here.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ THE HOUR ============ -->
+<section class="hour">
+  <div class="section wrap reveal">
+    <p class="eyebrow">What actually happens</p>
+    <h2>One hour. You'll know if it's for you by the end of it.</h2>
+    <p class="section__lede">Every Oasis runs on the same rhythm, wherever it is. You can walk in late, sit at the back, say nothing, and eat the food. Nobody will put you on the spot.</p>
+
+    <div class="hourline">
+      <div class="hourline__row">
+        <span class="hourline__t">First 10</span>
+        <div>
+          <h3>Just arrive</h3>
+          <p>Food out, music on, no program. Nobody has to walk into a circle cold. If it's your first time, someone will find you, and it won't be weird.</p>
+        </div>
+      </div>
+      <div class="hourline__row">
+        <span class="hourline__t">10 &ndash; 25</span>
+        <div>
+          <h3>Something ridiculous</h3>
+          <p>Karaoke, Bible trivia, finish the gospel lyric, a challenge nobody is good at. This is the part that makes the next part possible. It's also the part people tell their friends about.</p>
+        </div>
+      </div>
+      <div class="hourline__row">
+        <span class="hourline__t">25 &ndash; 45</span>
+        <div>
+          <h3>The real conversation</h3>
+          <p>Relationships, family, money, exam pressure, comparison, loneliness, what you're actually afraid of this semester. Students talk first. What's said here stays here, and nobody gets fixed on the spot.</p>
+        </div>
+      </div>
+      <div class="hourline__row">
+        <span class="hourline__t">45 &ndash; 55</span>
+        <div>
+          <h3>What the Word says about it</h3>
+          <p>Bible study, tied to whatever we just talked about rather than bolted on. Short, honest, and you can ask anything, including the awkward questions.</p>
+        </div>
+      </div>
+      <div class="hourline__row">
+        <span class="hourline__t">Last 5</span>
+        <div>
+          <h3>Prayer, then go</h3>
+          <p>We pray for whatever came up. You're welcome to be prayed for, and equally welcome to sit that out. Then it's announcements and you're gone by the hour.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="section__lede" style="margin-top:30px"><strong>Once a month we do something bigger:</strong> a prayer walk across campus, a movie night, a games tournament, or a survival night in exam season.</p>
   </div>
 </section>
 
@@ -434,7 +517,7 @@ a{color:inherit}
 <!-- ============ COMPASS ============ -->
 <section class="compass" id="compass">
   <div class="section wrap reveal">
-    <p class="eyebrow">Oasis Compass &middot; Online community &middot; Where everyone starts</p>
+    <p class="eyebrow">Oasis Compass &middot; Thursdays 6&ndash;7 PM ET &middot; On Google Meet</p>
     <h2>Not at IU Indianapolis or Butler? This is your Oasis.</h2>
     <div class="compass__grid">
       <div>
@@ -443,7 +526,8 @@ a{color:inherit}
         <p>It's the same thing our campus groups do, online: honest conversation about relationships, exams, pressure, money, purpose and everything else, with Scripture as the anchor. Plus prayer, and people who actually notice when you go quiet.</p>
         <p>You don't need to bring anything or be anything. Show up, listen, say as much or as little as you want. Plenty of people sit quiet for the first few weeks and that's completely normal.</p>
         <p><strong>You don't have to have it figured out to belong somewhere.</strong></p>
-        <p style="margin-top:26px"><a class="btn btn--dark" href="[[ COMPASS FORM LINK ]]">Join Oasis Compass</a></p>
+        <p class="meetline"><strong>We meet Thursdays, 6&ndash;7 PM Eastern, on Google Meet.</strong> Same link every week. Come with your camera off if that's easier, nobody minds.</p>
+        <p style="margin-top:24px"><a class="btn btn--dark" href="https://meet.google.com/oxh-mchk-ehs">Join this Thursday</a></p>
       </div>
       <div class="card-note">
         <h3>Why &ldquo;Compass&rdquo;?</h3>
