@@ -108,10 +108,11 @@ h2.big{font-size:clamp(33px,6.2vw,60px);max-width:15ch;margin-bottom:16px;font-w
 .spots{display:grid;gap:18px;margin-top:38px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .spot{position:relative;border-radius:18px;padding:24px;background:linear-gradient(165deg,#24655E,#1B524C);border:1px solid rgba(239,228,208,.16);color:var(--sand);box-shadow:0 20px 44px -26px rgba(0,0,0,.85);scroll-margin-top:20px}
 .spot--new{background:linear-gradient(165deg,#2E7C73,#1E5A54)}
-.spot--soon{background:transparent;border:1.5px dashed rgba(239,228,208,.4);box-shadow:none}
+.spot--online{background:linear-gradient(165deg,#4A5878,#333F5C);border-color:rgba(239,228,208,.18)}
+.spot--online .spot__uni{color:#B9C4DE}
+.spot--online .spot__tag{background:var(--amber-soft);color:var(--ink)}
 .spot__row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
 .spot__tag{font-family:var(--util);font-size:10px;letter-spacing:.13em;text-transform:uppercase;background:var(--amber);color:var(--ink);padding:5px 11px;border-radius:999px;font-weight:700}
-.spot--soon .spot__tag{background:transparent;border:1px solid var(--amber-soft);color:var(--amber-soft)}
 .spot h3{font-size:26px;color:var(--sand);margin-bottom:3px}
 .spot__uni{font-family:var(--util);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--amber-soft);margin-bottom:14px}
 .when{display:flex;align-items:center;gap:9px;font-size:15px;padding:9px 0;border-top:1px solid rgba(239,228,208,.18)}
@@ -277,15 +278,16 @@ h2.big{font-size:clamp(33px,6.2vw,60px);max-width:15ch;margin-bottom:16px;font-w
       </div>
     </article>
 
-    <article class="spot spot--soon" id="compass">
-      <div class="spot__row"><span class="spot__tag">Online</span></div>
+    <article class="spot spot--online" id="compass">
+      <div class="spot__row"><span class="spot__tag">Online</span><span style="font-family:var(--util);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-soft)">Anywhere</span></div>
       <h3>Oasis Compass</h3>
       <p class="spot__uni">No group on your campus? Start here</p>
-      <ul class="doing"><li>Real talk</li><li>Prayer</li><li>Bible study</li><li>Camera off is fine</li></ul>
+      <ul class="doing"><li>Real talk</li><li>Prayer</li><li>Bible study</li><li>Camera off is fine</li><li>High schoolers welcome</li></ul>
       <div class="when"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Thursdays, 6&ndash;7 PM</div>
-      <div class="when"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 10l6-3v10l-6-3z"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg>Google Meet, same link weekly</div>
+      <div class="when"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 10l6-3v10l-6-3z"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg>Google Meet, same link every week</div>
+      <div class="when"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0112 0"/><path d="M16 8.5a3 3 0 010 5"/></svg>Turn up, no sign-up needed</div>
       <div class="spot__cta">
-        <a class="btn btn--ghost btn--sm" href="https://meet.google.com/oxh-mchk-ehs">Join Thursday</a>
+        <a class="btn btn--solid btn--sm" href="https://meet.google.com/oxh-mchk-ehs">Join this Thursday</a>
       </div>
     </article>
   </div>
